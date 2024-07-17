@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(39, 39, 49);
+}
+::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+
+.container {
+    width: 80%;
+    height: 100%;
+    padding-block: 5rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.relative{
+    position: relative;
+}
+
+.hang-man-text {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.hang-man-container {
+    height: 80%;
+    width: 50%;
+    margin: 0 auto;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.hang-man-container-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    margin-top: 10%;
+    position: relative;
+}
+
+.head {
+    width: 10%;
+    height: auto;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.body {
+    background-color: white;
+    width: 25%;
+    padding: 0.5rem;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 38%;
+}
+
+.hands {
+    border-left: 1rem solid white;
+    border-top: 1rem solid white;
+    width: 6rem;
+    height: auto;
+    aspect-ratio: 1/1;
+    transform: rotate(45deg);
+}
+
+.legs {
+    border-left: 1rem solid white;
+    border-top: 1rem solid white;
+    width: 6rem;
+    height: auto;
+    aspect-ratio: 1/1;
+    transform: rotate(45deg);
+    margin-top: 10%;
+}
+
+.dash {
+    width: 3rem;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom:3px solid white;
+}
+
+.dash-div {
+    display: flex;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.dash-div-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+}
+
+.two-columns {
+    display: flex;
+}
+
+.hints {
+    color: white;
+    font-size: 2rem;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: ease 0.5s;
+}
+
+.btn {
+    width: 30%;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(204, 198, 198);
+}
+
+.key {
+    background-color: white;
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    cursor: pointer;
+}
+
+.key:hover {
+    background-color: rgb(190, 190, 190);
+}
+
+.keys {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem !important;
+}
+.hints-heading{
+    color: red;
+}
+.modal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.74);
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+.modal-container{
+    width: 50%;
+    height: 70%;
+    background-color: white;
+    border-radius: 30px;
+    position: absolute;
+    z-index: 5;
+
+}
+.section-1{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: end;
+}
+.cross-mark{
+    font-size: 2rem;
+    transition: ease 0.5s;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+.cross-mark:hover{
+    transform: rotate(45deg);
+    transition: ease 0.5s;
+}
+.modal-text{
+    font-size: 8rem;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+.modal-content{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+@media (max-width:1200px){
+    .two-columns{
+        flex-direction: column;
+    }
+    .keys {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem !important;
+    }
+    .key{
+        width: 2rem !important;
+        height: 2rem;
+    }
+    .hang-man-text{
+        font-size: 2rem;
+        display: none;
+    }
+    .dash {
+        width: 0.5rem;
+        border-bottom:3px solid white;
+    }
+    .dash-div-container{
+        position: relative;
+        right: 3rem;
+    }
+    .btn{
+        width: 10rem;
+        position: relative;
+        left: 3rem;
+    }
+    .modal-text{
+        font-size: 1.5rem;
+    }
+    .head{
+        width: 50px;
+    }
+    .body{
+        width: 130px;
+    }
+    .legs{
+        position: relative;
+        top: 15px;
+    }
+}

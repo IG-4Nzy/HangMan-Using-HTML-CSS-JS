@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="modal hidden" id="modal">
+        <div class="modal-container ">
+            <div class="section-1" onclick="closeModal()"><p class="cross-mark">❌</p></div>
+            <div class="modal-content">
+                <p class="modal-text" id="text-content"></p>
+            </div>
+        </div>
+    </div>
+    <div class="container relative">
+        <div class="two-columns">
+            <div class="keys">
+                <div class="key" onclick="buttonClicked('a')">A</div>
+                <div class="key" onclick="buttonClicked('b')">B</div>
+                <div class="key" onclick="buttonClicked('c')">C</div>
+                <div class="key" onclick="buttonClicked('d')">D</div>
+                <div class="key" onclick="buttonClicked('e')">E</div>
+                <div class="key" onclick="buttonClicked('f')">F</div>
+                <div class="key" onclick="buttonClicked('g')">G</div>
+                <div class="key" onclick="buttonClicked('h')">H</div>
+                <div class="key" onclick="buttonClicked('i')">I</div>
+                <div class="key" onclick="buttonClicked('j')">J</div>
+                <div class="key" onclick="buttonClicked('k')">K</div>
+                <div class="key" onclick="buttonClicked('l')">L</div>
+                <div class="key" onclick="buttonClicked('m')">M</div>
+                <div class="key" onclick="buttonClicked('n')">N</div>
+                <div class="key" onclick="buttonClicked('o')">O</div>
+                <div class="key" onclick="buttonClicked('p')">P</div>
+                <div class="key" onclick="buttonClicked('q')">Q</div>
+                <div class="key" onclick="buttonClicked('r')">R</div>
+                <div class="key" onclick="buttonClicked('s')">S</div>
+                <div class="key" onclick="buttonClicked('t')">T</div>
+                <div class="key" onclick="buttonClicked('u')">U</div>
+                <div class="key" onclick="buttonClicked('v')">V</div>
+                <div class="key" onclick="buttonClicked('w')">W</div>
+                <div class="key" onclick="buttonClicked('x')">X</div>
+                <div class="key" onclick="buttonClicked('y')">Y</div>
+                <div class="key" onclick="buttonClicked('z')">Z</div>
+            </div>
+            <div class="hang-man-container">
+                <p class="hang-man-text">HANG MAN</p>
+                <div class="hang-man-container-div">
+                    <div class="parts head hidden"></div>
+                    <div class="parts body hidden"></div>
+                    <div class="parts hands hidden"></div>
+                    <div class="parts legs hidden"></div>
+                </div>
+                <div class="dash-div-container">
+                    <div id="dashDiv" class="dash-div">
+                    </div>
+                </div>
+                <div class="buttons | dash-div-container">
+                    <button class="btn" onclick="restart()">Restart</button>
+                </div>
+            </div>
+          
+        </div>
+        <div id="hint" class="hints">
+            <p class="hints-heading">Hints</p>
+            <ul id="hintLists">
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
